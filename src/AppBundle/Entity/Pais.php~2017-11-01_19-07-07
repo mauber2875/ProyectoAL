@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Categoria
+ * Pais
  *
- * @ORM\Table(name="categoria")
+ * @ORM\Table(name="pais")
  * @ORM\Entity
  */
-class Categoria
+class Pais
 {
     /**
      * @var integer
@@ -31,7 +31,7 @@ class Categoria
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Pelicula", mappedBy="categoria")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Pelicula", mappedBy="pais")
      */
     private $peliculas;
 
@@ -58,7 +58,7 @@ class Categoria
      *
      * @param string $nombre
      *
-     * @return Categoria
+     * @return Pais
      */
     public function setNombre($nombre)
     {
@@ -82,7 +82,7 @@ class Categoria
      *
      * @param \AppBundle\Entity\Pelicula $pelicula
      *
-     * @return Categoria
+     * @return Pais
      */
     public function addPelicula(\AppBundle\Entity\Pelicula $pelicula)
     {
